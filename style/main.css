@@ -1,0 +1,421 @@
+/* 清除内外边距 */
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+
+/* structural elements 结构元素 */
+
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+
+/* list elements 列表元素 */
+
+pre,
+
+/* text formatting elements 文本格式元素 */
+
+fieldset,
+lengend,
+button,
+input,
+textarea,
+
+/* form elements 表单元素 */
+
+th,
+td,
+img {
+    /* table elements 表格元素 */
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover,
+a:visited,
+a:link {
+    text-decoration: none;
+    color: #000;
+}
+
+img {
+    border: 0;
+}
+
+input {
+    outline: 0;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+body,
+input,
+textarea{
+    font-family: "simhei";
+}
+
+/* 这是公共部分 */
+
+input.form-control{
+    max-width: 400px;
+    height: 36px;
+}
+
+textarea.form-control{
+    max-width: 600px;
+}
+
+.modal-cover{
+    background: rgba(0,0,0,.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    transition: all .5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal-cover.fade{
+    opacity: 1;
+    visibility: visible;
+}
+
+.header{
+    height: 70px;
+    width: 100%;
+    background: #06d995;
+}
+.system_title{
+    color: #fff;
+    font-size: 16px;
+    line-height: 70px;
+    text-align: center;
+}
+.content_left ul li{
+    text-align: center;
+    margin: 20px 0;
+}
+.content{
+    width: 100%;
+}
+.content_left{
+    width: 20%;
+    float: left;
+    padding-top: 20px;
+}
+
+.content-right{
+    width: 80%;
+    float: left;
+    border-left:1px solid #ccc;
+    box-sizing: border-box;
+}
+.content-right>h3{
+    text-align: center;
+    margin: 20px 0;
+}
+.form1>div{
+    margin-top:50px;
+}
+.form1>div>span{
+    display:block;
+    float: left;
+    width: 100px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+}
+/* 公共部分结束 */
+
+/* 后台文章列表开始 */
+.article_list_backend>li{
+    border: 1px solid #ccc;
+    border-bottom: 0px;
+    width: 800px;
+}
+
+.article_list_backend>li:first-of-type{
+    background: #fbfec2;
+}
+
+.article_list_backend>li:last-of-type{
+    border-bottom: 1px solid #ccc;
+}
+
+.article_list_backend>li>div{
+    float: left;
+    border-right: 1px solid #ccc;
+    text-align: center;
+}
+
+.article_list_backend>li>div:last-of-type{
+    border-right: 0;
+}
+
+.article_list_id{
+    width: 50px;
+}
+
+.article_list_title{
+    width: 500px;
+    text-align: left !important;
+    text-indent: 10px;
+}
+
+.article_list_date{
+    width: 100px;
+}
+
+.article_list_handle{
+    width: 100px;
+}
+/* 后台文章列表结束 */
+
+/* 后台登陆注册开始 */
+.login-box{
+    width: 600px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #ccc;
+    padding-bottom: 10px;
+    border-radius: 10px;
+}
+
+.login-head{
+    height: 50px;
+    line-height: 50px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+    border-radius: 10px 10px 0 0;
+    font-size: 18px;
+    font-family: "microsoft yahei";
+    text-indent: 20px;
+}
+
+.user-name{
+    margin-top: 20px;
+}
+
+.user-name,
+.user-password,
+.validate,
+.remember-pwd{
+    height: 50px;
+    line-height: 50px;
+}
+
+.login-body span{
+    display: block;
+    float: left;
+    width: 70px;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.login-body input{
+    float: left;
+    width: 300px;
+    margin-top: 7px;
+}
+
+.login-head>a{
+    display: block;
+    float: right;
+    font: 16px "simhei";
+    margin: 16px 20px 0 0;
+}
+
+.validate>input{
+    width: 120px;
+    text-transform:uppercase;
+}
+
+.login-handle{
+    height: 50px;
+    margin-top: 10px;
+}
+
+input.login-submit-btn{
+    width: 80px;
+    background: #509b02;
+    color: #fff;
+    border: none;
+    margin-left: 70px;
+}
+
+.register-btn{
+    display: block;
+    float: left;
+    width: 80px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    background: #ccc;
+    color: #fff;
+    border-radius: 4px;
+    margin: 7px 0 0 50px;
+}
+
+.register-box{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 11;
+    background: #fff;
+    width: 300px;
+    border-radius: 10px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.register-box.fade{
+    opacity: 1;
+    visibility: visible;
+}
+
+.register-header{
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 20px;
+    position: relative;
+    border-radius: 10px 10px 0 0;
+}
+
+.register-body{
+    padding: 0 20px;
+    border-radius: 0 0 10px 10px;
+}
+
+.register-tips{
+    color: red;
+    height: 20px;
+}
+
+.confirm-register-btn{
+    width: 100px;
+    border: 0;
+    background: #ff6b00;
+    color: #fff;
+    margin: 40px auto 20px;
+}
+
+.cancel-register{
+    display: block;
+    text-align: center;
+    font-size: 24px;
+    width: 20px;
+    height: 20px;
+    color: #ccc !important;
+    position: absolute;
+    top: -4px;
+    right: 10px;
+}
+
+.register-body>p{
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.error-tips{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    width: 200px;
+    border-radius: 10px;
+    z-index: 11;
+    opacity: 0;
+    visibility: hidden;
+    padding-bottom: 10px;
+}
+
+.error-tips.fade{
+    opacity: 1;
+    visibility: visible;
+}
+
+.error-head{
+    height: 30px;
+    line-height: 30px;
+    background: #ccc;
+    border-radius: 10px 10px 0 0;
+}
+
+.error-head>span{
+    margin-left: 15px;
+}
+
+.error-cancel{
+    display: block;
+    float: right;
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.error-text{
+    height: 60px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.error-confirm{
+    display: block;
+    padding: 5px 10px;
+    background: #ff6b00;
+    color: #fff !important;
+    float: left;
+    border-radius: 4px;
+    margin-left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.remember-pwd input{
+    float: left;
+    width: auto;
+    margin-top:25px;
+    transform: translate(0, -50%);
+    margin-left: 55px;
+}
+.remember-pwd span{
+    display: block;
+    float: left;
+}
+/* 后台登陆注册结束 */

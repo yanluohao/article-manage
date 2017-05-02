@@ -1,0 +1,386 @@
+/* 清除内外边距 */
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+
+/* structural elements 结构元素 */
+
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+
+/* list elements 列表元素 */
+
+pre,
+
+/* text formatting elements 文本格式元素 */
+
+fieldset,
+lengend,
+button,
+input,
+textarea,
+
+/* form elements 表单元素 */
+
+th,
+td,
+img {
+    /* table elements 表格元素 */
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover,
+a:visited,
+a:link {
+    text-decoration: none;
+}
+
+img {
+    border: 0;
+}
+
+input {
+    outline: 0;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+body,
+input,
+textarea{
+    font-family: "simhei";
+}
+
+/* 公用部分开始 */
+.head-top{
+    width: 100%;
+    height: 30px;
+    background: #eaeaea;
+    line-height: 30px;
+}
+
+.comWidth{
+    width: 1200px;
+    margin: 0 auto;
+    font-size: 14px;
+}
+
+.fixed-head{
+    width: 100%;
+    height: 70px;
+    background: rgba(153,153,153,.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: all .5s;
+    visibility: hidden;
+    opacity: 0;
+    height: 0px;
+    z-index: 1001;
+}
+
+.fixed-head.active{
+    visibility: visible;
+    opacity: 1;
+    height: 70px;
+    transition: all .3s;
+}
+
+.fixed-nav{
+    margin-left: 700px;
+}
+
+.fixed-nav li{
+    float: left;
+    line-height: 70px;
+    font-size: 16px;
+    padding: 0 15px;
+
+}
+
+.fixed-nav li a{
+    text-align: center;
+    color: #fff;
+}
+.fixed-nav li span{
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all .5s;
+    display: block;
+    position: absolute;
+    top: 20px;
+    height: 20px;
+    margin: 0 auto;
+    color: #ccc;
+}
+
+.fixed-nav li:hover span{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+footer{
+    margin-top: 50px;
+}
+
+.copyright{
+    text-align: center;
+    border-top: 1px solid #ddd;
+    padding: 20px 0;
+}
+
+.fixed-nav>li.active>a{
+    color: #000;
+}
+/* 公共部分结束 */
+
+/* 文章列表页开始 */
+.logoBar{
+    width: 1200px;
+    margin: 0 auto;
+    height: 40px;
+}
+
+.logoBar>img{
+    width: 100%;
+}
+
+.bannerBox,
+.scrollbg{
+    width: 100%;
+    height: 400px;
+}
+
+.bannerBox{
+    position: relative;
+}
+
+.scrollbg{
+    background: url("../images/bg_scroll.jpg");
+    background-size: cover;
+    background-position: top;
+    animation:bg_scroll 10s infinite alternate linear;
+    /*执行无限次，交替轮流执行，匀速执行*/
+}
+
+@keyframes bg_scroll{
+    to{
+        background-position: bottom;
+    }
+}
+
+.banner-content{
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    top: 50px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #fff;
+    background: rgba(0, 0, 0, .4);
+    border-radius: 10px;
+    opacity: 0;
+    transition:all .6s;
+}
+
+.banner-content>span{
+    display: block;
+    transform: translate(0,0);
+    opacity: 0;
+    transition: all .4s;
+}
+
+.bannerBox:hover .banner-content{
+    width: 400px;
+    height: 300px;
+    opacity: 1;
+}
+
+.bannerBox:hover .banner-content>span{
+    transform: translate(0,141px);
+    opacity: 1;
+}
+
+.content-list{
+    width: 100%;
+}
+
+.module{
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+.module-title{
+    font-size: 30px;
+    text-align: center;
+}
+
+.content-list-box{
+    margin-top: 50px;
+}
+
+.content-list-box ul{
+    width: 800px;
+}
+
+.content-list-box ul li{
+    margin-top: 10px;
+    padding: 20px 10px;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 2px 1px #c9c9c9;
+}
+
+.content-list-box ul li a{
+    font-size: 16px;
+}
+
+.content_title{
+    color: green;
+}
+
+.content-list-box ul li>p{
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+
+.open-content{
+    display: block;
+    float: right;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background: #fd8a41;
+    color: #fff;
+    margin-top: 10px;
+    transition: all .5s;
+}
+
+.open-content:hover{
+    border-radius: 5px;
+}
+
+.line-tips{
+    background: #ccc;
+    padding: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.content_author,
+.dateline{
+    float: left;
+    width: 150px;
+    height: 20px;
+    line-height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.search-box{
+    float: left;
+    margin: 10px 0 0 20px;
+}
+
+.search{
+    width: 250px;
+    height: 30px;
+    text-indent: 10px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #ccc;
+    display: block;
+    float: left;
+}
+
+.search-btn{
+    padding: 0 10px;
+    height: 32px;
+    border: none;
+    background: rgba(0, 0, 0, .5);
+    cursor:pointer;
+    color: #fff;
+    border-radius: 5px;
+    margin-left: 10px;
+    display: block;
+    float: left;
+    line-height: 32px;
+}
+
+.content-list-right{
+    float: left;
+}
+/* 文章列表页结束 */
+
+
+/* 这是文章详情页的部分 */
+.content-title{
+    text-align: center;
+    font-size: 24px;
+    margin-top: 40px;
+}
+
+.content-info{
+    margin-top: 30px;
+    text-align: center;
+    color: #999;
+    font-size: 16px;
+}
+
+.content{
+    margin-top: 50px;
+}
+
+.back-to-contentlist{
+    display: block;
+    float: left;
+    width: 140px;
+    height: 30px;
+    line-height: 30px;
+    color: #fff;
+    background: #ff6b00;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.content-module{
+    margin-top: 100px;
+}
+/* 文章详情页结束 */
